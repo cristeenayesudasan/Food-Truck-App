@@ -28,7 +28,7 @@ const Menu = () => {
   useEffect(() => {
     const fetchMenuItems = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/customermenu/menuitems");
+        const response = await axios.get("https://food-truck-app-backend.onrender.com/customermenu/menuitems");
         setMenuItems(response.data);
       } catch (err) {
         setError("Error fetching menu items");
@@ -40,7 +40,7 @@ const Menu = () => {
 
     const fetchLocation = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/location/current");
+        const response = await axios.get("https://food-truck-app-backend.onrender.com/location/current");
         console.log("Fetched location:", response.data);
         if (response.data) setLocation(response.data);
       } catch (error) {
