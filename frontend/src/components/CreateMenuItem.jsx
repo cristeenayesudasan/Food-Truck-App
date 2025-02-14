@@ -44,7 +44,7 @@ const CreateMenuItem = () => {
     formData.append("availability", availability);
     
     try {
-      const response = await fetch("http://localhost:3000/menu/create", {
+      const response = await fetch("https://food-truck-app-backend.onrender.com/menu/create", {
         method: "POST",
         body: formData,
       });
