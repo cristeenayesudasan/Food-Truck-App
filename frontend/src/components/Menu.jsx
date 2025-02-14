@@ -120,7 +120,7 @@ const Menu = () => {
             Fresh, Healthy Meals Delivered to You
           </Typography>
           <Typography variant="h5" gutterBottom sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 500 }}>
-            Find our food truck, pre-order your meals, and stay fit with delicious, nutritious food.
+            Find our food truck and stay fit with delicious, nutritious food.
           </Typography>
         </Box>
 
