@@ -24,7 +24,7 @@ const UpdateLocation = () => {
 
   const handleSubmit = async () => {
     try {
-      await axios.post("http://localhost:3000/location/update", location);
+      await axios.post("https://food-truck-app-backend.onrender.com/location/update", location);
       alert("Food Truck Location Updated!");
     } catch (error) {
       console.error("Error updating location:", error);
