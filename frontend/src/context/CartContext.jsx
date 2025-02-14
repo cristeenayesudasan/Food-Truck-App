@@ -12,7 +12,7 @@ export const CartProvider = ({ children }) => {
         if (!token) return;
 
         try {
-            const response = await axios.get("http://localhost:3000/cart/", {
+            const response = await axios.get("https://food-truck-app-backend.onrender.com/cart/", {
                 headers: { Authorization: `Bearer ${token}` },
             });
 
@@ -36,7 +36,7 @@ export const CartProvider = ({ children }) => {
 
         try {
             await axios.post(
-                "http://localhost:3000/cart/add",
+                "https://food-truck-app-backend.onrender.com/add",
                 { productId, quantity },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
@@ -60,7 +60,7 @@ export const CartProvider = ({ children }) => {
         }
 
         try {
-            await axios.delete(`http://localhost:3000/cart/remove/${cartItem._id}`, {
+            await axios.delete(`https://food-truck-app-backend.onrender.com/cart/remove/${cartItem._id}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
 
