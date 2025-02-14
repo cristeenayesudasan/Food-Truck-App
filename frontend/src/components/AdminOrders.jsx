@@ -8,7 +8,7 @@ const AdminOrders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/admin/all");
+        const response = await axios.get("https://food-truck-app-backend.onrender.com/admin/all");
         setOrders(response.data);
       } catch (error) {
         console.error("Error fetching orders:", error);
@@ -23,7 +23,7 @@ const AdminOrders = () => {
     if (!riderPhone) return alert("Rider phone is required!");
 
     try {
-      await axios.put(`http://localhost:3000/admin/update-order/${orderId}`, {
+      await axios.put(`https://food-truck-app-backend.onrender.com/admin/update-order/${orderId}`, {
         status: "out for delivery",
         riderPhone,
       });
