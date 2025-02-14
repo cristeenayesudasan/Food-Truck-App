@@ -18,7 +18,7 @@ const Orders = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/orders/user-orders/${userId}`
+          `https://food-truck-app-backend.onrender.com/orders/user-orders/${userId}`
         );
         setOrders(response.data);
       } catch (error) {
