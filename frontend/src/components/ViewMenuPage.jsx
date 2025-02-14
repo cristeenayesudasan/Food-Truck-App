@@ -10,7 +10,7 @@ const ViewMenuPage = () => {
 
   useEffect(() => {
     // Fetch menu items from your backend
-    fetch("http://localhost:3000/menu")
+    fetch("https://food-truck-app-backend.onrender.com/menu")
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
@@ -23,7 +23,7 @@ const ViewMenuPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/menu/menuDelete/${id}`, {
+      const response = await fetch(`https://food-truck-app-backend.onrender.com/menu/menuDelete/${id}`, {
         method: "DELETE",
       });
   
