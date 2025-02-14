@@ -44,13 +44,13 @@ const Cart = () => {
 
       if (newQuantity < 1) {
         // If quantity is zero, remove the item
-        await axios.delete(`http://localhost:3000/cart/remove/${cartItemId}`, {
+        await axios.delete(`https://food-truck-app-backend.onrender.com/cart/remove/${cartItemId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
       } else {
         // Otherwise, update the quantity
         await axios.put(
-          `http://localhost:3000/cart/update/${cartItemId}`,
+          `https://food-truck-app-backend.onrender.com/cart/update/${cartItemId}`,
           { quantity: newQuantity },
           { headers: { Authorization: `Bearer ${token}` } }
         );
