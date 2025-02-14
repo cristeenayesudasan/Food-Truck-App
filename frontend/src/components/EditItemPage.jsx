@@ -92,7 +92,7 @@ const EditItemPage = () => {
       formData.append("image", image); // Append image file
     }
 
-    fetch(`http://localhost:3000/menu/menuUpdate/${id}`, {
+    fetch(`https://food-truck-app-backend.onrender.com/menu/menuUpdate/${id}`, {
       method: "PUT",
       body: formData, // No need to set Content-Type header; it will be set automatically
     })
