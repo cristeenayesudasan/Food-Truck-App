@@ -45,7 +45,7 @@ const Registration = () => {
     if (!validateForm()) return;
 
     try {
-      const response = await axios.post("http://localhost:3000/users/createuser", {
+      const response = await axios.post("https://food-truck-app-backend.onrender.com/users/createuser", {
         name: formData.name,
         email: formData.email,
         mobileNo: formData.phone,
