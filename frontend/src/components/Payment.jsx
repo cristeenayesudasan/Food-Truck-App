@@ -24,7 +24,7 @@ const Payment = () => {
         return;
       }
 
-      const response = await axios.post("http://localhost:3000/payments/pay", { orderId });
+      const response = await axios.post("https://food-truck-app-backend.onrender.com/payments/pay", { orderId });
       const { paymentId, amount } = response.data;
 
       const options = {
@@ -34,7 +34,7 @@ const Payment = () => {
         order_id: paymentId,
         handler: async (response) => {
           alert("Payment Successful!");
-          await axios.post("http://localhost:3000/payments/success", { 
+          await axios.post("https://food-truck-app-backend.onrender.com/payments/success", { 
             orderId,
             paymentId: response.razorpay_payment_id
         }, {
