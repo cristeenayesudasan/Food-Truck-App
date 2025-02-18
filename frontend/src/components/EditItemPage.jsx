@@ -31,7 +31,7 @@ const EditItemPage = () => {
 
   useEffect(() => {
     // Fetch existing item details
-    fetch(`http://localhost:3000/menu/menuitem/${id}`)
+    fetch(`https://food-truck-app-backend.onrender.com/menu/menuitem/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setMenuItem(data);
