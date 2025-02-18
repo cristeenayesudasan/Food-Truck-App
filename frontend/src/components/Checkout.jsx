@@ -36,7 +36,7 @@ const Checkout = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/orders/checkout",
+        "https://food-truck-app-backend.onrender.com/orders/checkout",
         { cartItems: cart, totalAmount, address },
         { headers: { Authorization: `Bearer ${token}` } }
       );
