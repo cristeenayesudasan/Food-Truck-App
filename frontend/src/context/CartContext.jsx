@@ -36,7 +36,7 @@ export const CartProvider = ({ children }) => {
 
         try {
             await axios.post(
-                "https://food-truck-app-backend.onrender.com/add",
+                "https://food-truck-app-backend.onrender.com/cart/add",
                 { productId, quantity },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
