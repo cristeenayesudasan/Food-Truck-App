@@ -20,7 +20,6 @@ const Orders = () => {
         const response = await axios.get(
           `https://food-truck-app-backend.onrender.com/orders/user-orders/${userId}`
         );
-        console.log("Orders from backend:", response.data);
         setOrders(response.data);
       } catch (error) {
         console.error("Error fetching orders:", error);
@@ -75,8 +74,8 @@ const Orders = () => {
                   </Typography>
                   <ul>
                     {order.items.map((item) => (
-                      <li key={item.productId._id}>
-                        {item.productId.name} - {item.quantity} x ₹{item.price}
+                      <li key={item.productId ? item.productId._id : item._id}>
+                        {item.productId ? item.productId.name : "Unknown Product"} - {item.quantity} x ₹{item.price}
                       </li>
                     ))}
                   </ul>
